@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDO3D - Spiritual & Divination Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+        }
+        h1 {
+            font-size: 4rem;
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.3rem;
+            color: #a78bfa;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        .tool-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #9333ea;
+            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
+        }
+        .tool-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .tool-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #e879f9; }
+        .tool-card p { color: #a78bfa; font-size: 0.9rem; }
+        .status {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+        .status-live { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .status-soon { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+        footer a { color: #9333ea; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>MDO3D</h1>
+        <p class="tagline">Unlock the mysteries of the universe</p>
+        
+        <div class="tools-grid">
+            <a href="https://oracle-cards.vercel.app" class="tool-card">
+                <div class="tool-icon">&#128302;</div>
+                <h3>Oracle Cards</h3>
+                <p>Receive divine messages through mystical card readings</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://tarot-readings.vercel.app" class="tool-card">
+                <div class="tool-icon">&#127183;</div>
+                <h3>Tarot Readings</h3>
+                <p>Discover insights through the ancient art of tarot</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://dream-interpreter.vercel.app" class="tool-card">
+                <div class="tool-icon">&#127769;</div>
+                <h3>Dream Interpreter</h3>
+                <p>Decode the hidden meanings in your dreams</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://feng-shui-analyzer.vercel.app" class="tool-card">
+                <div class="tool-icon">&#9782;</div>
+                <h3>Feng Shui Analyzer</h3>
+                <p>Harmonize your space with ancient wisdom</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://past-life-insights.vercel.app" class="tool-card">
+                <div class="tool-icon">&#8734;</div>
+                <h3>Past Life Insights</h3>
+                <p>Explore your soul's journey through time</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://career-horoscope.vercel.app" class="tool-card">
+                <div class="tool-icon">&#9734;</div>
+                <h3>Career Horoscope</h3>
+                <p>Align your career with cosmic timing</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <a href="https://baby-name-oracle.vercel.app" class="tool-card">
+                <div class="tool-icon">&#128118;</div>
+                <h3>Baby Name Oracle</h3>
+                <p>Find the perfect name with spiritual significance</p>
+                <span class="status status-live">Live</span>
+            </a>
+            
+            <div class="tool-card">
+                <div class="tool-icon">&#9728;</div>
+                <h3>Numerology Calculator</h3>
+                <p>Discover the power of numbers in your life</p>
+                <span class="status status-soon">Coming Soon</span>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">&#9790;</div>
+                <h3>Astrology Charts</h3>
+                <p>Map your celestial influences</p>
+                <span class="status status-soon">Coming Soon</span>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>A <a href="https://latarence.com">Lamar</a> Platform</p>
+    </footer>
+</body>
+</html>
