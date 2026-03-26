@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mdo3d.com/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
