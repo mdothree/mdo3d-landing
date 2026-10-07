@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c2fa0"/><stop offset="1" stop-color="#160d38"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1080" cy="120" r="260" fill="#c4b5f4" opacity="0.10"/>
+<g transform="translate(80,70) scale(1.5)"><rect x="1" y="1" width="62" height="62" rx="13" fill="#4c2fa0" stroke="#c4b5f4" stroke-width="2"/><path d="M32 12 C34 26 38 30 52 32 C38 34 34 38 32 52 C30 38 26 34 12 32 C26 30 30 26 32 12 Z" fill="#c4b5f4"/></g>
+<text x="200" y="133" font-family="Menlo, monospace" font-weight="700" font-size="44" fill="#FFFFFF">MDO3D Guidance</text>
+<text x="80" y="330" font-family="Georgia, serif" font-weight="700" font-size="80" fill="#FFFFFF" letter-spacing="-1">AI Spiritual Insight</text>
+<rect x="80" y="370" width="120" height="6" rx="3" fill="#c4b5f4"/>
+<text x="80" y="440" font-family="Inter, sans-serif" font-size="32" fill="#D6CCF5">Oracle readings, dreams, tarot, numerology,</text>
+<text x="80" y="486" font-family="Inter, sans-serif" font-size="32" fill="#D6CCF5">astrology, I Ching, runes and more.</text>
+<text x="80" y="566" font-family="Inter, sans-serif" font-weight="600" font-size="28" fill="#c4b5f4">mdo3d.com/guidance</text>
+</svg>
