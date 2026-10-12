@@ -1,4 +1,0 @@
-Contact: https://mdo3d.com/about
-Expires: 2027-10-12T00:00:00Z
-Preferred-Languages: en
-Canonical: https://mdo3d.com/.well-known/security.txt
