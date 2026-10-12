@@ -607,11 +607,14 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
 .mobile-nav a:hover { color: var(--accent-mid); }
 
 /* RESPONSIVE */
+/* 768-1079: full nav, compacted (TABLET-MDO3D-NAV-HAMBURGER) */
+@media (max-width: 1079px) {
+  .nav-link { padding: 0.4rem 0.6rem; }
+  .nav-right { gap: 0.5rem; }
+  .nav-right .btn-solid { display: none; }
+}
 @media (max-width: 960px) {
   nav { padding: 0 1.5rem; }
-  .nav-center { display: none; }
-  .mobile-menu-btn { display: flex; }
-  .nav-right .btn-ghost, .nav-right .btn-solid { display: none; }
   .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem 3rem; gap: 3rem; }
   .hero-visual { display: none; }
   .cat-grid { grid-template-columns: 1fr 1fr; }
@@ -620,6 +623,11 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   .section, .platform-table-section, .categories { padding-left: 1.5rem; padding-right: 1.5rem; }
   .guidance-spotlight { padding-left: 1.5rem; padding-right: 1.5rem; }
   .trust-bar { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (max-width: 767px) {
+  .nav-center { display: none; }
+  .mobile-menu-btn { display: flex; }
+  .nav-right .btn-ghost, .nav-right .btn-solid { display: none; }
 }
 @media (max-width: 600px) {
   .cat-grid { grid-template-columns: 1fr; }
