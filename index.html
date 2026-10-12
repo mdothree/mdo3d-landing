@@ -643,6 +643,20 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   .ptable th:nth-child(3), .ptable td:nth-child(3),
   .ptable th:nth-child(4), .ptable td:nth-child(4) { display: none; }
 }
+/* A11Y-013: 44px minimum tap targets on touch widths */
+@media (max-width: 768px) {
+  .nav-logo, .footer-logo { min-height: 44px; }
+  .theme-btn, .mobile-menu-btn { width: 44px; height: 44px; }
+  .btn-hero, .btn-hero-outline, .btn-ghost, .btn-light, .btn-outline-light {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+  }
+  .filter-btn { min-height: 44px; min-width: 44px; }
+  .ptable a.row-link { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+  .footer-social a { width: 44px; height: 44px; }
+  .footer-links { gap: 0; }
+  .footer-links a, .footer-legal a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+  .footer-legal { flex-wrap: wrap; column-gap: 1.25rem; row-gap: 0; }
+}
 </style>
 </head>
 <body>
