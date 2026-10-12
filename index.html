@@ -716,7 +716,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       </div>
       <div class="hero-meta">
         <div class="meta-item">
-          <div class="meta-num">14</div>
+          <div class="meta-num" id="live-count">28</div>
           <div class="meta-label">Live platforms</div>
         </div>
         <div class="meta-item">
@@ -778,7 +778,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
         <div class="cat-icon-wrap ic-guidance">🔮</div>
         <div class="cat-title">Spiritual Guidance</div>
         <div class="cat-desc">Oracle readings, dream interpretation, numerology, astrology, and more. AI meets ancient wisdom.</div>
-        <div class="cat-count">10 platforms · guidance.mdo3d.com</div>
+        <div class="cat-count" data-cat-count="spiritual" data-suffix=" · guidance.mdo3d.com">10 live · guidance.mdo3d.com</div>
         <div class="cat-footer">
           <span class="cat-link">guidance.mdo3d.com</span>
           <span class="cat-arrow">→</span>
@@ -788,8 +788,8 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       <div class="cat-card professional" id="professional" onclick="window.location='https://rigor.design'">
         <div class="cat-icon-wrap ic-professional">💼</div>
         <div class="cat-title">Professional & Career</div>
-        <div class="cat-desc">Resume analysis, interview coaching, LinkedIn optimization, and career trajectory tools.</div>
-        <div class="cat-count">4 platforms · rigor.design</div>
+        <div class="cat-desc">Resume analysis, cover letters, interview coaching, LinkedIn, networking, portfolio review, and salary negotiation tools.</div>
+        <div class="cat-count" data-cat-count="professional" data-suffix=" · rigor.design">7 live · 1 planned · rigor.design</div>
         <div class="cat-footer">
           <span class="cat-link">rigor.design</span>
           <span class="cat-arrow">→</span>
@@ -799,8 +799,8 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       <div class="cat-card utilities" id="utilities" onclick="window.location='https://mdothree.com'">
         <div class="cat-icon-wrap ic-utilities">⚙️</div>
         <div class="cat-title">Utilities & Productivity</div>
-        <div class="cat-desc">Smart notes, focus tools, research accelerators, and ritual planning systems.</div>
-        <div class="cat-count">4 platforms · mdothree.com</div>
+        <div class="cat-desc">Browser-based PDF, image, JSON, QR, text, color, hash, password, and timestamp tools, plus productivity apps in the works.</div>
+        <div class="cat-count" data-cat-count="utility" data-suffix=" · mdothree.com">10 live · 4 planned · mdothree.com</div>
         <div class="cat-footer">
           <span class="cat-link">mdothree.com</span>
           <span class="cat-arrow">→</span>
@@ -811,7 +811,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
         <div class="cat-icon-wrap ic-lead">🎯</div>
         <div class="cat-title">Lead Generation</div>
         <div class="cat-desc">AI-driven lead scoring, outreach engines, and pipeline intelligence for growth teams.</div>
-        <div class="cat-count">3 platforms</div>
+        <div class="cat-count" data-cat-count="lead" data-suffix="">3 planned</div>
         <div class="cat-footer">
           <span class="cat-link">Explore tools</span>
           <span class="cat-arrow">→</span>
@@ -822,7 +822,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
         <div class="cat-icon-wrap ic-commerce">🛍️</div>
         <div class="cat-title">Commerce</div>
         <div class="cat-desc">Runwae and next-generation commerce infrastructure, built for the AI era.</div>
-        <div class="cat-count">1 platform · runwae.com</div>
+        <div class="cat-count" data-cat-count="commerce" data-suffix=" · runwae.com">1 live · runwae.com</div>
         <div class="cat-footer">
           <span class="cat-link">runwae.com</span>
           <span class="cat-arrow">→</span>
@@ -833,7 +833,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
         <div class="cat-icon-wrap ic-plugins">🔌</div>
         <div class="cat-title">Plugins & Extensions</div>
         <div class="cat-desc">Browser extensions and integrations that embed AI into your existing workflows.</div>
-        <div class="cat-count">4 platforms</div>
+        <div class="cat-count" data-cat-count="plugins" data-suffix="">4 planned</div>
         <div class="cat-footer">
           <span class="cat-link">Explore tools</span>
           <span class="cat-arrow">→</span>
@@ -1116,11 +1116,24 @@ const platforms = [
   { icon:'📄', name:'Resume Analyzer', desc:'AI resume optimization with job-specific gap analysis', cat:'professional', status:'live', href:'https://resume.rigor.design' },
   { icon:'🎤', name:'Interview Coach', desc:'Real-time AI mock interviews and feedback', cat:'professional', status:'live', href:'https://interview.rigor.design' },
   { icon:'📊', name:'Career Compass', desc:'Long-term career planning with labor market AI', cat:'professional', status:'soon', href:'#' },
-  { icon:'💼', name:'LinkedIn Optimizer', desc:'AI profile and outreach optimization', cat:'professional', status:'dev', href:'#' },
+  { icon:'💼', name:'LinkedIn Optimizer', desc:'Rewrite your headline, summary and experience for recruiters', cat:'professional', status:'live', href:'https://linkedin.rigor.design' },
+  { icon:'✉️', name:'Cover Letter Generator', desc:'Personalized cover letters from your resume and the job description', cat:'professional', status:'live', href:'https://cover.rigor.design' },
+  { icon:'🤝', name:'Networking Emails', desc:'Cold outreach, coffee chat, referral and follow-up emails', cat:'professional', status:'live', href:'https://networking.rigor.design' },
+  { icon:'🗂️', name:'Portfolio Review', desc:'Structured AI feedback on your professional portfolio', cat:'professional', status:'live', href:'https://portfolio.rigor.design' },
+  { icon:'💰', name:'Salary Negotiation', desc:'Negotiation plan with talking points and scripts', cat:'professional', status:'live', href:'https://salary.rigor.design' },
   { icon:'📝', name:'Smart Notes', desc:'AI-enhanced note-taking with auto summarization', cat:'utility', status:'soon', href:'#' },
   { icon:'⏱️', name:'Focus Timer', desc:'Intelligent Pomodoro adapted to your rhythm', cat:'utility', status:'soon', href:'#' },
   { icon:'📅', name:'Ritual Planner', desc:'Productivity planning aligned with energy cycles', cat:'utility', status:'soon', href:'#' },
   { icon:'🔍', name:'Research Lens', desc:'AI-accelerated research and source synthesis', cat:'utility', status:'dev', href:'#' },
+  { icon:'📑', name:'PDF Tools', desc:'Merge, split and compress PDFs in your browser', cat:'utility', status:'live', href:'https://pdf.mdothree.com' },
+  { icon:'🖼️', name:'Image Tools', desc:'Resize, convert, compress and crop images in your browser', cat:'utility', status:'live', href:'https://image.mdothree.com' },
+  { icon:'{ }', name:'JSON Tools', desc:'Format, validate and convert JSON', cat:'utility', status:'live', href:'https://json.mdothree.com' },
+  { icon:'▦', name:'QR Codes', desc:'Generate and decode QR codes for URLs, WiFi, vCards and more', cat:'utility', status:'live', href:'https://qr.mdothree.com' },
+  { icon:'🔤', name:'Text Tools', desc:'Word counter, case converter, diff, find and replace', cat:'utility', status:'live', href:'https://text.mdothree.com' },
+  { icon:'🎨', name:'Color Picker', desc:'HEX, RGB, HSL and CMYK values', cat:'utility', status:'live', href:'https://color.mdothree.com' },
+  { icon:'#️⃣', name:'Hash Generator', desc:'MD5, SHA-1, SHA-256 and SHA-512 hashes, client-side', cat:'utility', status:'live', href:'https://hash.mdothree.com' },
+  { icon:'🔑', name:'Password Generator', desc:'Secure random passwords created locally in your browser', cat:'utility', status:'live', href:'https://password.mdothree.com' },
+  { icon:'⏲️', name:'Timestamp Converter', desc:'Unix timestamps to dates and back', cat:'utility', status:'live', href:'https://timestamp.mdothree.com' },
   { icon:'⚖️', name:'AI Assistant Compare', desc:'Side-by-side comparison of open-source AI assistants with live GitHub stats', cat:'utility', status:'live', href:'https://compare.mdo3d.com' },
   { icon:'🎯', name:'Lead Alchemist', desc:'AI lead scoring and conversion optimization', cat:'lead', status:'soon', href:'#' },
   { icon:'📧', name:'Outreach Engine', desc:'Personalized AI-powered cold email campaigns', cat:'lead', status:'soon', href:'#' },
@@ -1168,6 +1181,22 @@ function renderTable(cat) {
   });
 }
 renderTable('all');
+
+// MDO3D-DIRECTORY-MISMATCH: every count on the page is computed from the platforms
+// array above (live = status 'live'; planned = 'soon' + 'dev').
+(function renderCounts() {
+  const live = (list) => list.filter(p => p.status === 'live').length;
+  const lc = document.getElementById('live-count');
+  if (lc) lc.textContent = String(live(platforms));
+  document.querySelectorAll('[data-cat-count]').forEach(el => {
+    const rows = platforms.filter(p => p.cat === el.dataset.catCount);
+    const l = live(rows), planned = rows.length - l;
+    const parts = [];
+    if (l) parts.push(`${l} live`);
+    if (planned) parts.push(`${planned} planned`);
+    el.textContent = parts.join(' · ') + (el.dataset.suffix || '');
+  });
+})();
 
 // Filter buttons with keyboard support
 const filterBtns = document.querySelectorAll('.filter-btn');
