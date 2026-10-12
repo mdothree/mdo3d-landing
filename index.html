@@ -158,6 +158,10 @@ body {
   text-decoration: none; transition: top 0.2s ease;
 }
 .skip-link:focus { top: 1rem; }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 :focus-visible {
   outline: 2px solid var(--accent-mid);
   outline-offset: 2px;
@@ -911,11 +915,11 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   <table class="ptable fade-in" id="platformTable">
     <thead>
       <tr>
-        <th style="width:40px;"></th>
+        <th style="width:40px;"><span class="visually-hidden">Icon</span></th>
         <th>Platform</th>
         <th>Category</th>
         <th>Status</th>
-        <th style="width:80px;"></th>
+        <th style="width:80px;"><span class="visually-hidden">Link</span></th>
       </tr>
     </thead>
     <tbody id="tableBody"></tbody>
