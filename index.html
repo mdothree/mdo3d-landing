@@ -655,6 +655,12 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   .footer-links a, .footer-legal a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
   .footer-legal { flex-wrap: wrap; column-gap: 1.25rem; row-gap: 0; }
 }
+/* MOBILE-GENERAL-TEXT-SIZE: no visible text under 12px on phone/tablet widths */
+@media (max-width: 768px) {
+  .logo-mark, .hero-eyebrow, .section-label, .cat-count, .gs-label, .gp-tag,
+  .ptable th, .cat-badge, .status-badge,
+  .footer-sub, .footer-col h3, .footer-legal a { font-size: 0.75rem; }
+}
 </style>
 </head>
 <body>
