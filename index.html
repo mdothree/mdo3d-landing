@@ -662,6 +662,10 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   .ptable th, .cat-badge, .status-badge,
   .footer-sub, .footer-col h3, .footer-legal a { font-size: 0.75rem; }
 }
+/* VISUAL-QA 2026-10-13: platform-table badges. Dark: category / In Dev badges #9090a8 and #80809a on #2e2e3d
+   were 4.3:1 and ~3.6:1. Light: "Coming Soon" #c17f24 on #fff4e0 was 3.0:1. */
+:root:not(.light) .cat-badge, :root:not(.light) .s-dev { color: #ababc0; }
+:root.light .s-soon { color: #8a5a10; }
 </style>
   <script src="/js/consent.js" defer></script>
 </head>
