@@ -99,7 +99,7 @@
 <main id="main-content" class="wrap">
   <div class="eyebrow">Legal</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: October 12, 2026</p>
+  <p class="updated">Last updated: October 13, 2026</p>
 
   <p>This Privacy Policy describes how MDO3D ("we", "us", "our") handles information across mdo3d.com and the family of platforms we operate (the "Services"). We aim to collect as little personal information as possible and to be clear about what we do collect.</p>
 
@@ -114,7 +114,17 @@
   <p>We use information to provide and improve the Services, deliver results you request, process payments, respond to support requests, and keep the Services secure. We do not sell your personal information.</p>
 
   <h2>Third-party processors</h2>
-  <p>We rely on providers such as Firebase (authentication), Stripe (payments), Vercel (hosting) and, if you accept analytics cookies, Google Analytics to run the Services. These providers process data on our behalf under their own terms.</p>
+  <p>We rely on providers such as Firebase (authentication and database), Stripe (payments), Vercel (hosting), Anthropic (the AI model that generates results on some platforms, including the Rigor career tools) and, if you accept analytics cookies, Google Analytics to run the Services. These providers process data on our behalf under their own terms.</p>
+
+  <h2 id="rigor">Resume and career tools (Rigor)</h2>
+  <p>The Rigor career tools at rigor.design (resume analyzer, cover letter, interview practice, LinkedIn profile, networking email, portfolio review and salary negotiation) work as follows:</p>
+  <ul>
+    <li><strong>Sign-in and plan.</strong> The tools require an account (email and password through Firebase Authentication) and an active Rigor Pro subscription. We keep a subscription record for your account (plan, status, renewal date and your Stripe customer and subscription IDs) and a monthly usage counter (the number of AI generations per tool). The counter holds counts only, not the text you entered.</li>
+    <li><strong>What is sent.</strong> When you run a tool, the text you typed or pasted (for example your resume, a job description, a LinkedIn section, interview answers, or salary details) is sent over HTTPS to our API at api.rigor.design. The API trims it to a set length and forwards it to Anthropic, which generates the result. A resume file you choose to upload must be plain text (.txt); it is read in your browser and placed in the text box, and the file itself is never uploaded.</li>
+    <li><strong>What we store.</strong> Our API does not write your resume or other tool input to our database or to our logs; it returns the result to your browser. Nothing is saved to your account unless you press <strong>Save</strong>. Saving stores a history item in our Firebase database, linked to your account and shown back to you in the tool: for the resume analyzer, the score plus the first 100 characters of your resume and of the job description; for the other tools, the generated result (for example the cover letter, email, or review) and the role or recipient details shown with it.</li>
+    <li><strong>How long.</strong> Saved history items and usage counters are kept while your account exists. The subscription record is kept for as long as needed for billing and legal obligations. There is no in-app delete button yet: email <a href="mailto:hello@mdo3d.com">hello@mdo3d.com</a> from the address on your account and we will delete your saved history, or your whole account and its data, and confirm by email.</li>
+    <li><strong>No sale, no profiling.</strong> We do not sell resume content, share it with employers or recruiters, or use it to build advertising profiles.</li>
+  </ul>
 
   <h2 id="cookies">Cookies and analytics</h2>
   <p>Our sites can use Google Analytics 4, a Google service that counts visits and shows which pages are used. Where it is turned on, a banner asks first. Google Analytics loads only after you click Accept; it then sets its cookies (<code>_ga</code> and <code>_ga_*</code>, kept for up to two years) and sends usage data such as the pages you view, your device and browser type and your approximate location to Google. If you click Reject or don't answer, it does not load and no analytics cookie is set. We remember your choice in our own cookie (<code>mdo_consent</code>, 180 days); change it at any time with &ldquo;Cookie settings&rdquo; at the bottom of the page. We don't use advertising cookies. A site where analytics is not turned on shows no banner and loads none of this.</p>
@@ -123,7 +133,7 @@
   <p>We keep account and billing records for as long as your account is active and as needed to meet legal obligations. Input used only to generate a one-time result is not retained beyond that purpose where feasible.</p>
 
   <h2>Your choices</h2>
-  <p>You can use many of our tools without an account. If you hold an account, you may request deletion of your data by contacting us.</p>
+  <p>Some of our tools work without an account. If you hold an account, you may request a copy or deletion of your data by contacting us. See also our <a href="/refund">Refund Policy</a>, <a href="/cancellation">Cancellation Policy</a> and <a href="/acceptable-use">Acceptable Use Policy</a>.</p>
 
   <h2>Changes</h2>
   <p>We may update this Policy from time to time. Material changes will be reflected by the "Last updated" date above.</p>
@@ -133,7 +143,7 @@
 </main>
 
 <footer>
-  <p>© 2026 MDO3D · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></p>
+  <p>© 2026 MDO3D · <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refunds</a> · <a href="/cancellation">Cancellation</a> · <a href="/acceptable-use">Acceptable Use</a> · <a href="/contact">Contact</a></p>
 </footer>
 </body>
 </html>
