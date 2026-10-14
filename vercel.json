@@ -43,5 +43,17 @@
       "**": false,
       "main": true
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/guidance",
+      "destination": "https://guidance.mdo3d.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guidance.html",
+      "destination": "https://guidance.mdo3d.com/",
+      "statusCode": 301
+    }
+  ]
 }
