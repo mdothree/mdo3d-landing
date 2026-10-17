@@ -62,9 +62,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -262,7 +262,7 @@ nav {
   line-height: 1.08; letter-spacing: -0.02em;
   color: var(--ink); margin-bottom: 1.5rem;
 }
-.hero h1 em { font-style: italic; color: var(--accent-mid); }
+.hero h1 em { font-style: normal; color: var(--accent-mid); }
 .hero-desc {
   font-size: 1.05rem; line-height: 1.75; color: var(--ink-40);
   margin-bottom: 2.5rem; font-weight: 300;
@@ -343,7 +343,7 @@ a.stack-card:focus-visible { outline: 2px solid var(--ink, #0a0a0f); outline-off
   letter-spacing: -0.02em; line-height: 1.15;
   color: var(--ink); margin-bottom: 1rem;
 }
-.section-h2 em { font-style: italic; color: var(--accent-mid); }
+.section-h2 em { font-style: normal; color: var(--accent-mid); }
 
 /* CATEGORIES */
 .categories { padding: 5rem 3rem; }
@@ -407,7 +407,7 @@ a.stack-card:focus-visible { outline: 2px solid var(--ink, #0a0a0f); outline-off
   line-height: 1.1; letter-spacing: -0.02em;
   color: white; margin-bottom: 1.25rem;
 }
-.gs-h2 em { font-style: italic; color: #c4b5f4; }
+.gs-h2 em { font-style: normal; color: #c4b5f4; }
 .gs-desc { font-size: 0.95rem; line-height: 1.75; color: #9090a8; margin-bottom: 2.5rem; font-weight: 300; }
 .btn-light {
   background: white; color: #0a0a0f; padding: 0.75rem 1.8rem;
@@ -670,6 +670,27 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
 :root.light .s-soon { color: #8a5a10; }
 </style>
   <script src="/js/consent.js" defer></script>
+<style id="light-pass-2026-10-16">
+/* Light improvement pass on the original design (Principal 10-16: "keep the original mdo3d and maybe improve
+   it a bit"). Same identity: DM Serif Display / DM Sans / JetBrains Mono, violet accent, M3 mark, theme toggle.
+   Changes only: corners capped at 4px and no pills, the one-sided gradient stripes on category cards removed,
+   emoji replaced by mono monograms, body copy weight 400 for legibility, steadier section spacing. */
+.logo-mark,.btn-solid,.btn-ghost,.nav-link,.btn-hero,.btn-hero-outline,.filter-btn,.mobile-menu-btn{border-radius:4px}
+.hero-eyebrow{align-self:flex-start;border-radius:3px;background:transparent;border:1px solid var(--border-strong);color:var(--ink-40);font-family:'JetBrains Mono',monospace;font-weight:500;letter-spacing:.06em}
+.stack-card,.cat-card,.gp-item,.platform-table-wrap,.table-wrap{border-radius:4px}
+.stack-card-tag,.live-pill,.cat-badge,.status-badge,.gp-tag{border-radius:3px}
+.cat-card::before{display:none}
+/* No italics (Principal 10-16): emphasis by colour only. */
+em,i,cite,dfn,var,address,blockquote,q{font-style:normal}
+.hero-desc,.gs-desc{font-weight:400}
+.hero h1{font-size:clamp(2.3rem,3.9vw,3.15rem);line-height:1.06;letter-spacing:-.025em}
+.mono-ic{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:500;letter-spacing:.02em;line-height:1}
+.stack-icon,.gp-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid var(--border-strong);border-radius:4px;color:var(--accent-mid)}
+.cat-icon-wrap{border-radius:4px;color:var(--ink)}
+.platform-icon .mono-ic{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--border);border-radius:4px;color:var(--ink-40)}
+.categories,.guidance-spotlight,.platform-table-section{padding-top:6rem;padding-bottom:6rem}
+@media (max-width:768px){.categories,.guidance-spotlight,.platform-table-section{padding:4rem 1rem}}
+</style>
 </head>
 <body>
 
@@ -717,11 +738,10 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
   <div class="hero">
     <div class="hero-content fade-in">
       <div class="hero-eyebrow">
-        <div class="hero-eyebrow-dot"></div>
-        AI Platform Ecosystem
+        Readings · career tools · utilities · data
       </div>
-      <h1>One ecosystem.<br><em>Many dimensions</em><br>of intelligence.</h1>
-      <p class="hero-desc">MDO3D builds AI-powered tools across spiritual guidance, professional development, productivity utilities, and commerce — each platform engineered with precision and purpose.</p>
+      <h1>Readings, career tools<br><em>and browser utilities.</em></h1>
+      <p class="hero-desc">Tarot, runes, numerology and seven other reading practices; seven career tools at Rigor; browser utilities at mdothree.com; and lead data from public records. Each section below says what it does and where to start.</p>
       <div class="hero-actions">
         <a href="#categories" class="btn-hero">Browse All Platforms</a>
         <a href="https://guidance.mdo3d.com" class="btn-hero-outline">Visit Guidance →</a>
@@ -736,21 +756,21 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
     <div class="hero-visual">
       <div class="hero-card-stack">
         <a class="stack-card card-c1" href="https://oracle.mdo3d.com">
-          <div class="stack-icon">🔮</div>
+          <div class="stack-icon"><span class="mono-ic">OR</span></div>
           <div class="stack-card-tag" style="background:#ede8ff;color:#4c2fa0;">Guidance</div>
           <div class="stack-card-title">Oracle Cards</div>
           <div class="stack-card-sub">AI-powered divination & personal readings</div>
           <div class="live-pill"><div class="live-dot"></div> Live</div>
         </a>
         <a class="stack-card card-c2" href="https://resume.rigor.design">
-          <div class="stack-icon">📄</div>
+          <div class="stack-icon"><span class="mono-ic">RE</span></div>
           <div class="stack-card-tag" style="background:#e8efff;color:#1a4fa3;">Professional</div>
           <div class="stack-card-title">Resume Analyzer</div>
           <div class="stack-card-sub">AI resume scoring & optimization</div>
           <div class="live-pill"><div class="live-dot"></div> Beta</div>
         </a>
         <a class="stack-card card-c3" href="https://runwae.com">
-          <div class="stack-icon">🛍️</div>
+          <div class="stack-icon"><span class="mono-ic">RW</span></div>
           <div class="stack-card-tag" style="background:#ffeef2;color:#a82040;">Commerce</div>
           <div class="stack-card-title">Runwae</div>
           <div class="stack-card-sub">Influencer marketing agreements</div>
@@ -779,7 +799,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
     <div class="cat-grid fade-in">
 
       <div class="cat-card guidance" onclick="window.location='https://guidance.mdo3d.com'">
-        <div class="cat-icon-wrap ic-guidance">🔮</div>
+        <div class="cat-icon-wrap ic-guidance"><span class="mono-ic">OR</span></div>
         <div class="cat-title">Spiritual Guidance</div>
         <div class="cat-desc">Oracle readings, dream interpretation, numerology, astrology, and more. AI meets ancient wisdom.</div>
         <div class="cat-count" data-cat-count="spiritual" data-suffix=" · guidance.mdo3d.com">10 live · guidance.mdo3d.com</div>
@@ -790,7 +810,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       </div>
 
       <div class="cat-card professional" id="professional" onclick="window.location='https://rigor.design'">
-        <div class="cat-icon-wrap ic-professional">💼</div>
+        <div class="cat-icon-wrap ic-professional"><span class="mono-ic">CT</span></div>
         <div class="cat-title">Professional & Career</div>
         <div class="cat-desc">Resume analysis, cover letters, interview coaching, LinkedIn, networking, portfolio review, and salary negotiation tools.</div>
         <div class="cat-count" data-cat-count="professional" data-suffix=" · rigor.design">7 in beta · rigor.design</div>
@@ -801,7 +821,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       </div>
 
       <div class="cat-card utilities" id="utilities" onclick="window.location='https://mdothree.com'">
-        <div class="cat-icon-wrap ic-utilities">⚙️</div>
+        <div class="cat-icon-wrap ic-utilities"><span class="mono-ic">UT</span></div>
         <div class="cat-title">Utilities & Productivity</div>
         <div class="cat-desc">Browser-based PDF, image, JSON, QR, text, color, hash, password, and timestamp tools at mdothree.com, plus Prompts for Business.</div>
         <div class="cat-count" data-cat-count="utility" data-suffix="">11 live</div>
@@ -812,7 +832,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       </div>
 
       <div class="cat-card lead" onclick="document.querySelector('[data-cat=lead]').click(); document.getElementById('all-platforms').scrollIntoView({behavior:'smooth'})">
-        <div class="cat-icon-wrap ic-lead">🎯</div>
+        <div class="cat-icon-wrap ic-lead"><span class="mono-ic">LD</span></div>
         <div class="cat-title">Lead Generation</div>
         <div class="cat-desc">Lead lists from public records: layoff (WARN) notices at LayoffLeads, plus a RonnaScanner waitlist for B2B prospect tools.</div>
         <div class="cat-count" data-cat-count="lead" data-suffix="">1 live · 1 waitlist</div>
@@ -823,7 +843,7 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
       </div>
 
       <div class="cat-card commerce" id="commerce" onclick="window.location='https://runwae.com'">
-        <div class="cat-icon-wrap ic-commerce">🛍️</div>
+        <div class="cat-icon-wrap ic-commerce"><span class="mono-ic">RW</span></div>
         <div class="cat-title">Commerce</div>
         <div class="cat-desc">Runwae: influencer marketing agreements between brands and creators.</div>
         <div class="cat-count" data-cat-count="commerce" data-suffix=" · runwae.com">1 live · runwae.com</div>
@@ -851,52 +871,52 @@ footer { background: var(--ink-80); padding: 4rem 3rem 2rem; }
     </div>
     <div class="guidance-platforms">
       <a href="https://oracle.mdo3d.com" class="gp-item new">
-        <div class="gp-icon">🔮</div>
+        <div class="gp-icon"><span class="mono-ic">OR</span></div>
         <div class="gp-name">Oracle Cards</div>
-        <div class="gp-tag">✦ Flagship</div>
+        <div class="gp-tag">Start here</div>
       </a>
       <a href="https://dreams.mdo3d.com" class="gp-item">
-        <div class="gp-icon">🌙</div>
+        <div class="gp-icon"><span class="mono-ic">DR</span></div>
         <div class="gp-name">Dream Interpreter</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://tarot.mdo3d.com" class="gp-item">
-        <div class="gp-icon">🃏</div>
+        <div class="gp-icon"><span class="mono-ic">TA</span></div>
         <div class="gp-name">Tarot Readings</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://numerology.mdo3d.com" class="gp-item">
-        <div class="gp-icon">🔢</div>
+        <div class="gp-icon"><span class="mono-ic">NU</span></div>
         <div class="gp-name">Numerology</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://astrology.mdo3d.com" class="gp-item">
-        <div class="gp-icon">⭐</div>
+        <div class="gp-icon"><span class="mono-ic">AS</span></div>
         <div class="gp-name">Astrology</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://fengshui.mdo3d.com" class="gp-item">
-        <div class="gp-icon">☯️</div>
+        <div class="gp-icon"><span class="mono-ic">FS</span></div>
         <div class="gp-name">Feng Shui</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://iching.mdo3d.com" class="gp-item">
-        <div class="gp-icon">☰</div>
+        <div class="gp-icon"><span class="mono-ic">☰</span></div>
         <div class="gp-name">I Ching</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://runes.mdo3d.com" class="gp-item">
-        <div class="gp-icon">ᚱ</div>
+        <div class="gp-icon"><span class="mono-ic">ᚱ</span></div>
         <div class="gp-name">Runes</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://names.mdo3d.com" class="gp-item">
-        <div class="gp-icon">👶</div>
+        <div class="gp-icon"><span class="mono-ic">BN</span></div>
         <div class="gp-name">Baby Names</div>
         <div class="gp-tag">Live</div>
       </a>
       <a href="https://pastlife.mdo3d.com" class="gp-item">
-        <div class="gp-icon">🕰️</div>
+        <div class="gp-icon"><span class="mono-ic">PL</span></div>
         <div class="gp-name">Past Lives</div>
         <div class="gp-tag">Live</div>
       </a>
@@ -1137,7 +1157,7 @@ function renderTable(cat) {
   const tbody = document.getElementById('tableBody');
   tbody.innerHTML = filtered.map(p => `
     <tr${p.href && p.href !== '#' ? ` data-href="${p.href}" tabindex="0" role="link"` : ''}>
-      <td class="platform-icon">${p.icon}</td>
+      <td class="platform-icon"><span class="mono-ic">${p.name.replace(/[^A-Za-z ]/g, '').split(' ').filter(Boolean).map(w => w[0]).join('').slice(0, 2).toUpperCase()}</span></td>
       <td>
         <div class="platform-name">${p.name}</div>
         <div class="platform-desc">${p.desc}</div>
